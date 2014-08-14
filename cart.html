@@ -1,0 +1,79 @@
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<meta charset="UTF-8">
+<head>
+    <title>来此购网上商店</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--add css file-->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+    <!--add js file-->
+    <script src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
+    <script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation"><a href="index.html"><lable class="row-">Let us go!</lable></a></li>
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="product.html">商品</a></li>
+                <li role="presentation"><a href="product.html">商品</a></li>
+                <div class="text-right">
+                    <li role="presentation"><a href="cart.html">购物车(0)</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <div class="row text-center">
+                <div class="col-md-3"><label class="h4">名称</label></div>
+                <div class="col-md-3"><label class="h4">价格(元)</label></div>
+                <div class="col-md-3"><label class="h4">数量</label></div>
+                <div class="col-md-3"><label class="h4">小计(元)</label></div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <label>水果类</label>
+                </div>
+                <div class="panel-body">
+                    <div class="row text-center">
+                        <div class="col-md-3">苹果</div>
+                        <div class="col-md-3">10</div>
+                        <div class="col-md-3"><button>+</button><label>&nbsp;&nbsp;5&nbsp;&nbsp;</label><button>-</button>千克</div>
+                        <div class="col-md-3">50</div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-3">香蕉</div>
+                        <div class="col-md-3">5</div>
+                        <div class="col-md-3"><button>+</button><label>&nbsp;&nbsp;3&nbsp;&nbsp;</label><button>-</button>千克</div>
+                        <div class="col-md-3">15</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <label>饮料类</label>
+                </div>
+                <div class="panel-body">
+                    <div class="row text-center">
+                        <div class="col-md-3">可乐</div>
+                        <div class="col-md-3">3</div>
+                        <div class="col-md-3"><button>+</button><label>&nbsp;&nbsp;2&nbsp;&nbsp;</label><button>-</button>瓶</div>
+                        <div class="col-md-3">6</div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-right text-danger h4"><label>总计：33元</label></p>
+            <p class="text-right"><a class="btn btn-primary btn-lg" role="button" href="../order.html">结算</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
