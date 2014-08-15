@@ -8,6 +8,7 @@
     <!--add js file-->
     <script src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
     <script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/loadCart.js"></script>
 </head>
 <body>
 <div class="container">
@@ -17,9 +18,8 @@
                 <li role="presentation"><a href="index.html"><lable class="row-">Let us go!</lable></a></li>
                 <li role="presentation"><a href="index.html">首页</a></li>
                 <li role="presentation"><a href="product.html">商品</a></li>
-                <div class="text-right">
-                    <li role="presentation"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>购物车(0)</a></li>
-                </div>
+               <li role="presentation"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>购物车(0)</a></li>
+
             </ul>
         </div>
     </nav>
@@ -34,50 +34,49 @@
             </div>
         </div>
 
-        <div class="panel-body">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">
-                    <label>水果类</label>
-                </div>
-                <div class="panel-body">
-                    <div class="row text-center">
-                        <div class="col-md-3">苹果</div>
-                        <div class="col-md-3">10</div>
-                        <div class="col-md-3 form-inline">
-                            <button>+</button>&nbsp;
-                            <input type="text" class="form-control input-sm" value="5"/>
-                            &nbsp;<button>-</button></div>
-                        <div class="col-md-3">50</div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-3">香蕉</div>
-                        <div class="col-md-3">5</div>
-                        <div class="col-md-3 form-inline"><button>+</button>&nbsp;
-                            <input type="text" class="form-control input-sm" value="5"/>
-                            &nbsp;<button>-</button></div>
-                        <div class="col-md-3">15</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">
-                    <label>饮料类</label>
-                </div>
-                <div class="panel-body">
-                    <div class="row text-center">
-                        <div class="col-md-3">可乐</div>
-                        <div class="col-md-3">3</div>
-                        <div class="col-md-3 form-inline"><button>+</button>&nbsp;
-                            <input type="text" class="form-control input-sm" value="5"/>
-                            &nbsp;<button>-</button></div>
-                        <div class="col-md-3">6</div>
-                    </div>
-                </div>
-            </div>
-            <p class="text-right text-danger h4"><label>总计：33元</label></p>
-            <p class="text-right"><a class="btn btn-primary btn-lg" role="button" href="../order.html">结算</a></p>
+        <div class="panel-body" id="addCart">
+            <!--<div class="panel panel-default">-->
+                <!--&lt;!&ndash; Default panel contents &ndash;&gt;-->
+                <!--<div class="panel-heading">-->
+                    <!--<label>水果类</label>-->
+                <!--</div>-->
+                <!--<div class="panel-body">-->
+                    <!--<div class="row text-center">-->
+                        <!--<div class="col-md-3">苹果</div>-->
+                        <!--<div class="col-md-3">10</div>-->
+                        <!--<div class="col-md-3 form-inline">-->
+                            <!--<button>+</button>&nbsp;-->
+                            <!--<input type="text" class="form-control input-sm" value="5"/>-->
+                            <!--&nbsp;<button>-</button></div>-->
+                        <!--<div class="col-md-3">50</div>-->
+                    <!--</div>-->
+                    <!--<div class="row text-center">-->
+                        <!--<div class="col-md-3">香蕉</div>-->
+                        <!--<div class="col-md-3">5</div>-->
+                        <!--<div class="col-md-3 form-inline"><button>+</button>&nbsp;-->
+                            <!--<input type="text" class="form-control input-sm" value="5"/>-->
+                            <!--&nbsp;<button>-</button></div>-->
+                        <!--<div class="col-md-3">15</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel panel-default">-->
+                <!--&lt;!&ndash; Default panel contents &ndash;&gt;-->
+                <!--<div class="panel-heading">-->
+                    <!--<label>饮料类</label>-->
+                <!--</div>-->
+                <!--<div class="panel-body">-->
+                    <!--<div class="row text-center">-->
+                        <!--<div class="col-md-3">可乐</div>-->
+                        <!--<div class="col-md-3">3</div>-->
+                        <!--<div class="col-md-3 form-inline"><button>+</button>&nbsp;-->
+                            <!--<input type="text" class="form-control input-sm" value="5"/>-->
+                            <!--&nbsp;<button>-</button></div>-->
+                        <!--<div class="col-md-3">6</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
         </div>
     </div>
 </div>
