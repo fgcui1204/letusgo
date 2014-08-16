@@ -75,7 +75,13 @@ function btnInput(element,operate){
     if(operate=='add'){
         inputCount.val(parseInt(inputCount.val())+1);
     }else if(operate=='sub'){
-        inputCount.val(parseInt(inputCount.val())-1);
+        console.log(parseInt(inputCount.val()));
+        if(parseInt(inputCount.val())>1){
+            inputCount.val(parseInt(inputCount.val())-1);
+        }else{
+            inputCount.val(parseInt(1));
+        }
+
     }
     for(var i=0;i<items.length;i++){
         if(items[i].Product.p_name==productName){
