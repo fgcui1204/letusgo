@@ -11,7 +11,6 @@ function add2Cart(p_name) {
     }
     var str = JSON.stringify(cart_data);
     localStorage.setItem("name",str);
-
 }
 
 function  getItemByName(p_name) {

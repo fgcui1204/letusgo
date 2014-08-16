@@ -9,6 +9,8 @@
     <!--add js file-->
     <script src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
     <script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/loadCart.js"></script>
+    <script src="js/home.js"></script>
 </head>
 <body>
 <div class="container">
@@ -19,7 +21,7 @@
                 <li role="presentation" class="active"><a href="index.html">首页</a></li>
                 <li role="presentation"><a href="../product.html">商品</a></li>
                 <div class="text-right">
-                    <li role="presentation"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>购物车(0)</a></li>
+                    <li role="presentation"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>购物车(<span id="totalCount"></span>)</a></li>
                 </div>
             </ul>
         </div>

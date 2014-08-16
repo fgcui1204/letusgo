@@ -1,8 +1,7 @@
 var already_exit_sort = [];
-var items;
+
 $(document).ready(function () {
-   items=JSON.parse(localStorage.getItem("name"));
-   items=JSON.parse(localStorage.getItem("name"));
+    var items=JSON.parse(localStorage.getItem("name"));
     if(items===null){
         items=[];
     }
@@ -15,8 +14,9 @@ $(document).ready(function () {
             $('#' + items[i].Product.p_sort + '').append('<div class="panel-body"><div class="row text-center"><div class="col-md-3">'+items[i].Product.p_name+'</div><div class="col-md-3">'+items[i].Product.p_price+'</div> <div class="col-md-3 form-inline"><button>+</button>&nbsp;<input type="text" class="form-control input-sm" value="'+items[i].count+'"/>&nbsp;<button>-</button></div><div class="col-md-3">'+items[i].Product.p_price*items[i].count+'</div</div></div></div></div>');
         }
     }
-    $('#addCart').append('<p class="text-right text-danger h4"><label>总计：33元</label></p><p class="text-right"><a class="btn btn-primary btn-lg" role="button" href="../order.html">结算</a></p>');
-    $()
+    $('#addCart').append('<p class="text-right text-danger h4"><label>总计：33元</label></p>' +
+        '<p class="text-right"><a class="btn btn-primary btn-lg" role="button" href="../order.html">结算</a></p>');
+    $('#totalCount').text(getTotalCount());
 });
 function isExist1(p_sort) {
     if (already_exit_sort.length === 0) {
@@ -31,9 +31,21 @@ function isExist1(p_sort) {
     return true;
 }
 function getTotalCount(){
+    var items=JSON.parse(localStorage.getItem("name"));
     var totalCount=0;
-    for(var i=0;i<items.length;i++){
-        totalCount+=items[i].count;
+    if(items===null){
+        totalCount=0;
+    }else{
+        for(var i=0;i<items.length;i++){
+            totalCount+=items[i].count;
+        }
     }
+
     return totalCount;
 }
+//function getTotalMoney(){
+//    var items=JSON.parse(localStorage.getItem("name"));
+//    for(){
+//
+//    }
+//}

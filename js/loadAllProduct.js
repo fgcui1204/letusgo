@@ -2,7 +2,9 @@ $(document).ready(function () {
     getProductList();
     $('.btn').on('click',function(){
         add2Cart($(this)[0].id);
-    });
+        $('#totalCount').text(getTotalCount());
+     });
+   //
 });
 function getProductList(){
     var allProduct = loadAllProduct();
