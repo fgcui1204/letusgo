@@ -8,7 +8,8 @@ $(document).ready(function () {
     for (var i = 0; i < items.length; i++) {
        // console.log(items[i].Product.p_sort);
         if (isExist1(items[i].Product.p_sort)) {
-            $('#addCart').append(' <div class="panel panel-default"><div class="panel-heading"><label>'+items[i].Product.p_sort+'</label> </div><div class="panel-body"  id=' + items[i].Product.p_sort + '><div class="row text-center"><div class="col-md-3">'+items[i].Product.p_name+'</div><div class="col-md-3">'+items[i].Product.p_price+'</div> <div class="col-md-3 form-inline num"><button class="btnAdd" name="'+items[i].Product.p_name+'">+</button>&nbsp;<input type="text" name="'+items[i].Product.p_name+'" class="form-control input-sm countInput" value="'+items[i].count+'"/>&nbsp;<button class="btnSub" name="'+items[i].Product.p_name+'">-</button></div><div class="col-md-3 perMoney">'+items[i].Product.p_price*items[i].count+'</div</div></div></div></div>');
+            $('#addCart').append(' <div class="panel panel-default"><div class="panel-heading"><label>'+items[i].Product.p_sort+'</label> </div><div class="panel-body"  id=' + items[i].Product.p_sort + '><div class="row text-center"><div class="col-md-3">'+items[i].Product.p_name+'</div><div class="col-md-3">'+items[i].Product.p_price+'</div> <div class="col-md-3 form-inline num"><button class="btnAdd" name="'+items[i].Product.p_name+'">+</button>&nbsp;<input type="text" name="'+items[i].Product.p_name+'" class="form-control input-sm countInput" value="'+items[i].count+'"/>&nbsp;<button class="btnSub" name="'+items[i]
+                .Product.p_name+'">-</button></div><div class="col-md-3 perMoney">'+items[i].Product.p_price*items[i].count+'</div</div></div></div></div>');
             already_exit_sort.push(items[i].Product.p_sort);
         } else {
             $('#' + items[i].Product.p_sort + '').append('<div class="panel-body"  id=' + items[i].Product.p_sort + '><div class="row text-center"><div class="col-md-3">'+items[i].Product.p_name+'</div><div class="col-md-3">'+items[i].Product.p_price+'</div> <div class="col-md-3 form-inline num"><button class="btnAdd" name="'+items[i].Product.p_name+'">+</button>&nbsp;<input type="text" name="'+items[i].Product.p_name+'" class="form-control input-sm countInput" value="'+items[i].count+'"/>&nbsp;<button class="btnSub" name="'+items[i].Product.p_name+'">-</button></div><div class="col-md-3 perMoney">'+items[i].Product.p_price*items[i].count+'</div</div></div></div>');
@@ -75,11 +76,8 @@ function btnInput(element,operate){
     if(operate=='add'){
         inputCount.val(parseInt(inputCount.val())+1);
     }else if(operate=='sub'){
-        console.log(parseInt(inputCount.val()));
-        if(parseInt(inputCount.val())>1){
+        if(parseInt(inputCount.val())>0){
             inputCount.val(parseInt(inputCount.val())-1);
-        }else{
-            inputCount.val(parseInt(1));
         }
 
     }
